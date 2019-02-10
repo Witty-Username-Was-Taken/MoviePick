@@ -19,7 +19,7 @@ public class Movie {
         this.theaterList = null;
     }
 
-    public Movie(String title, String genre, String description, List<Rating> ratings, int rating, List<Theater> theaterList) {
+    public Movie(String title, String genre, String description, int rating, List<Theater> theaterList) {
         this.title = title;
         this.genre = genre;
         this.description = description;
@@ -50,10 +50,5 @@ public class Movie {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public List<Rating> getRatings() {
-        return ratings;
-    }
-
 
 }
