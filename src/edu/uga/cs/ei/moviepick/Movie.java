@@ -5,26 +5,26 @@ import java.util.List;
 
 public class Movie {
 
-    String title;
-    String genre;
-    String description;
-    List<Rating> ratings = new ArrayList<Rating>();
-    double averageRating;
+    private String title;
+    private String genre;
+    private String description;
+    private int rating;
+    private List<Theater> theaterList = new ArrayList<Theater>;
 
     public Movie() {
         this.title = null;
         this.genre = null;
         this.description = null;
-        this.ratings = null;
-        this.averageRating = 0;
+        this.rating = 0;
+        this.theaterList = null;
     }
 
-    public Movie(String title, String genre, String description, List<Rating> ratings, double averageRating) {
+    public Movie(String title, String genre, String description, List<Rating> ratings, int rating, List<Theater> theaterList) {
         this.title = title;
         this.genre = genre;
         this.description = description;
-        this.ratings = ratings;
-        this.averageRating = averageRating;
+        this.rating = rating;
+        this.theaterList = theaterList;
     }
 
     public String getTitle() {
@@ -55,26 +55,5 @@ public class Movie {
         return ratings;
     }
 
-    public void setRatings(List<Rating> ratings) {
-        this.ratings = ratings;
-    }
 
-    public double getAverageRating() {
-        return averageRating;
-    }
-
-    public void setAverageRating(double averageRating) {
-        this.averageRating = averageRating;
-    }
-
-    public double calcAverageRating(List<Rating> ratings) {
-        double sum = 0;
-        for(Rating rating: ratings) {
-            sum += rating.rating;
-        }
-
-        double average = (double) sum/ratings.size();
-
-        return average;
-    }
 }
