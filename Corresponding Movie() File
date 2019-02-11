@@ -1,11 +1,14 @@
 
+
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Movie {
 
     private String title;
-    private int movieID;
     private String genre;
     private String description;
     private int rating;
@@ -23,6 +26,7 @@ public class Movie {
         this.description = description;
         this.rating = rating;
     }
+
 
     public String getTitle() {
         return title;
@@ -46,6 +50,14 @@ public class Movie {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
 }
