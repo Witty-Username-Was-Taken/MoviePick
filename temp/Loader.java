@@ -1,11 +1,16 @@
 package edu.uga.cs.ei.moviepick;// This client is using the new JAX-RS 2.0 client interface
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.StringReader;
 
 import java.net.URI;
 
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+
 import org.xml.sax.InputSource;
 
 import org.w3c.dom.Node;
@@ -13,8 +18,14 @@ import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 import org.w3c.dom.ls.DOMImplementationLS;
 import org.w3c.dom.ls.LSSerializer;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonParser;
+
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Link;
 
 import javax.ws.rs.client.Entity;
 
@@ -35,10 +46,6 @@ public class Loader {
 
     public static void main(String[] args) {
 
-    }
-
-    public static void main(String[] args) {
-
         BufferedReader br = null;
         String         output = null;
 
@@ -50,7 +57,7 @@ public class Loader {
 
         ResteasyClient client = new ResteasyClientBuilder().build();
         System.out.println("Made it here");
-        ResteasyWebTarget target = client.target( "localhost:8080/cs8350_3_movies/api/movies" );
+        ResteasyWebTarget target = client.target( "localhost:8080/cs8350_3_movies/helloworld" );
         Response response = target.request().post( Entity.entity( student1, MediaType.APPLICATION_XML ) );
         System.out.println("Made it past target");
 

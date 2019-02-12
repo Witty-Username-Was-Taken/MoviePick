@@ -1,7 +1,7 @@
 #/bin/sh
 #
 
-CLASSPATH=.:$HOME/classes/gson-2.8.0.jar:'lib/*'
+CLASSPATH=.:$HOME/classes/lib/gson-2.8.0.jar:'lib/*'
 
 echo $CLASSPATH
 
