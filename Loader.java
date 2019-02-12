@@ -57,7 +57,7 @@ public class Loader {
 
         ResteasyClient client = new ResteasyClientBuilder().build();
         System.out.println("Made it here");
-        ResteasyWebTarget target = client.target( "localhost:8080/cs8350_3_movies/movies" );
+        ResteasyWebTarget target = client.target( "localhost:8080/cs8350_3_movies/helloworld" );
         Response response = target.request().post( Entity.entity( student1, MediaType.APPLICATION_XML ) );
         System.out.println("Made it past target");
 
