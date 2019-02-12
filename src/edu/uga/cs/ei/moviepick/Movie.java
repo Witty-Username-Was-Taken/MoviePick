@@ -3,29 +3,30 @@ package edu.uga.cs.ei.moviepick;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Movie {
 
     private String title;
     private String genre;
     private String description;
     private int rating;
-    private List<Theater> theaterList = new ArrayList<Theater>;
 
     public Movie() {
         this.title = null;
         this.genre = null;
         this.description = null;
         this.rating = 0;
-        this.theaterList = null;
     }
 
-    public Movie(String title, String genre, String description, int rating, List<Theater> theaterList) {
+    public Movie(String title, String genre, String description, int rating) {
         this.title = title;
         this.genre = genre;
         this.description = description;
         this.rating = rating;
-        this.theaterList = theaterList;
     }
+
 
     public String getTitle() {
         return title;
@@ -49,6 +50,14 @@ public class Movie {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
 }

@@ -13,6 +13,7 @@ public class MovieService {
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_XML)
     public Movie getMovieXML(@PathParam("id") Integer id) {
-
+        Movie temp = new Movie();
+        return temp;
     }
 }
