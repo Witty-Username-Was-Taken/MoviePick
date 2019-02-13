@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="480b247a-469a-40c7-b4c7-f56d84dd84ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs8350_3_movies.war" beforeDir="false" afterPath="$PROJECT_DIR$/cs8350_3_movies.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +21,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="171" column="9" lean-forward="true" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="9" />
+            <state relative-caret-position="97">
+              <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getAMovie#0;class#MovieService#0" />
+                <element signature="method#findMoviesByRating#0;class#MovieService#0" />
+                <element signature="method#findMoviesByGenre#0;class#MovieService#0" />
+                <element signature="method#findMoviesByTitle#0;class#MovieService#0" />
+                <element signature="method#deleteStudent#0;class#MovieService#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,9 +105,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="3" />
-    <option name="y" value="263" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="812" />
   </component>
@@ -104,7 +115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -128,6 +138,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -258,7 +269,9 @@
       <workItem from="1549991996153" duration="2107000" />
       <workItem from="1549998579284" duration="332000" />
       <workItem from="1549999826901" duration="9158000" />
-      <workItem from="1550072559389" duration="1149000" />
+      <workItem from="1550072559389" duration="1594000" />
+      <workItem from="1550077956101" duration="833000" />
+      <workItem from="1550082721945" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="Loader.java file adjusted, still getting error. Movie class now has XMLRootElement Annotation. Temporary build file and RunClient script added">
       <created>1549937024385</created>
@@ -271,13 +284,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26069000" />
+    <option name="totallyTimeSpent" value="28062000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3" y="23" width="1437" height="812" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="812" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2939068" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3025751" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -293,7 +306,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32916668" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32916668" />
@@ -396,10 +409,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Classes/Spring_2019/Enterprise_Integration/MoviePick/src/edu/cs/uga/cs8350_3_movies/Loader.java">
+    <entry file="file://$PROJECT_DIR$/../../Classes/Spring_2019/Enterprise_Integration/MoviePick/src/edu/cs/uga/cs8350_3_movies/Loader.java" />
+    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="97">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getAMovie#0;class#MovieService#0" />
+            <element signature="method#findMoviesByRating#0;class#MovieService#0" />
+            <element signature="method#findMoviesByGenre#0;class#MovieService#0" />
+            <element signature="method#findMoviesByTitle#0;class#MovieService#0" />
+            <element signature="method#deleteStudent#0;class#MovieService#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -427,13 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="171" column="9" lean-forward="true" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="9" />
         </state>
       </provider>
     </entry>

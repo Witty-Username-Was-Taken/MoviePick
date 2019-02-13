@@ -106,6 +106,28 @@ public class MovieService {
     }
 
     @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_XML)
+    public Movie getMovieByID(@PathParam("id") Integer id) {
+
+        Movie result = new Movie();
+        for (Movie movie : list) {
+            if (movie.getId() == id) {
+                result = movie;
+            }
+        }
+
+        if( result == null ) {
+            // if you'd like to log this exception in JBoss log file, use WebApplicationException
+            // otherwise, use NoLogWebApplicationException, which will not log the exception
+            // throw new WebApplicationException( Response.Status.NOT_FOUND );
+            throw new NoLogWebApplicationException( Response.Status.NOT_FOUND );
+        }
+
+        return result;
+    }
+
+    @GET
     @Path("/theaters")
     @Produces(MediaType.APPLICATION_XML)
     public Response getTheatersXML() {
@@ -118,8 +140,7 @@ public class MovieService {
 
     @POST
     @Consumes( MediaType.APPLICATION_XML )
-    public Response createMovieXML( Movie movie )
-    {
+    public Response createMovieXML( Movie movie ) {
         System.out.println( "StudentService.createMovieXML; nextId: " + nextId );
 
         // create a new id for the movie
@@ -134,10 +155,9 @@ public class MovieService {
     }
 
     @PUT
-    @Path( "{id}" )
+    @Path( "/{id}" )
     @Consumes( MediaType.APPLICATION_XML )
-    public Response updateMovieXML( @PathParam( "id" ) Integer id, Movie movie )
-    {
+    public Response updateMovieXML( @PathParam( "id" ) Integer id, Movie movie ) {
         Movie current = new Movie();
         for (Movie temp: list) {
             if (temp.getId() == id) {
@@ -161,9 +181,8 @@ public class MovieService {
     }
 
     @DELETE
-    @Path( "{id}" )
-    public Response deleteStudent( @PathParam("id") Integer id )
-    {
+    @Path( "/{id}" )
+    public Response deleteStudent( @PathParam("id") Integer id ) {
 
         for (Movie movie : list) {
             if (movie.getId() == id) {
