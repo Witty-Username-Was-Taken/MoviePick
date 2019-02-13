@@ -1,19 +1,19 @@
 package edu.uga.cs.ei.moviepick;
 
-import javax.ws.rs.*;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+
 @Path("/movies")
 public class MovieService {
-
-    private int nextId = 0;
-    List<Movie> list = initialize();
 
     @GET
     @Path("/search")
@@ -25,6 +25,7 @@ public class MovieService {
         System.out.println("Received query parameters: title=" + title);
         System.out.println("Received query parameters: rating=" + rating);
         System.out.println("Received query parameters: genre=" + genre);
+        List<Movie> list = Loader.initialize();
         if (rating != 0) {
             List<Movie> result = findMoviesByRating(list, rating);
             if (result.size() > 0) {
@@ -90,45 +91,26 @@ public class MovieService {
         return result;
     }
 
-    private List<Movie> initialize() {
-        List<Movie> list = new ArrayList<>();
-        list.add(new Movie("Lego", "Animation", "A Lego Movie", 4));
-        list.add(new Movie("Glass", "Fantasy", "A Night Shyamalan Fantasy thriller", 3));
-        list.add(new Movie("Miss Bala", "Drama", "Effects of narco trafficking", 1));
-        list.add(new Movie("Test 1", "Animation", "Test Movie 1", 4));
-        list.add(new Movie("Test 2", "Drama", "Test Movie 2", 3));
-        return list;
-    }
-
     @GET
     @Produces(MediaType.APPLICATION_XML)
     public Response getMovieJson() {
         //return Response.ok().entity(initialize()).build();
 
-        GenericEntity<List<Movie>> entity = new GenericEntity<List<Movie>>(initialize()){};
+        GenericEntity<List<Movie>> entity = new GenericEntity<List<Movie>>(Loader.initialize()){};
         Response response = Response.ok( entity ).build();
 
         return response;
     }
 
-    /**
-     * Create a new student using an XML representation.
-     * @param is data for a Student (XML) to be created
-     * @return a response encoding
-     */
-    @POST
-    @Consumes( MediaType.APPLICATION_XML )
-    public Response createStudentXML( Movie movie )
-    {
-        System.out.println( "StudentService.createStudentXML; nextId: " + nextId );
+    @GET
+    @Path("/theaters")
+    @Produces(MediaType.APPLICATION_XML)
+    public Response getMoviesXML() {
 
-        // create a new id for the student
-        Integer id = nextId++;
+        GenericEntity<List<Theater>> entity = new GenericEntity<List<Theater>>(Loader.initTheaters()){};
+        Response response = Response.ok( entity ).build();
 
-        // store the new student
-        list.add(new Movie("Test 4", "Comedy", "Test Movie 4", 1));
-
-        // return a response
-        return Response.created( URI.create( "/student/" + id ) ).build();
+        return response;
     }
+
 }

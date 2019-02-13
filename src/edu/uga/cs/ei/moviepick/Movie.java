@@ -1,32 +1,39 @@
 package edu.uga.cs.ei.moviepick;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Movie {
 
+    private int id;
     private String title;
     private String genre;
     private String description;
     private int rating;
 
     public Movie() {
+        this.id = 0;
         this.title = null;
         this.genre = null;
         this.description = null;
         this.rating = 0;
     }
 
-    public Movie(String title, String genre, String description, int rating) {
+    public Movie(int id, String title, String genre, String description, int rating) {
+        this.id = id;
         this.title = title;
         this.genre = genre;
         this.description = description;
         this.rating = rating;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;

@@ -60,6 +60,6 @@ Tasks to be done
 		  	<include name="Loader.java" />
 			<classpath refid="classpath"/>
 		</javac>
-	</target>	
+	</target>
 
 </project>
