@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="480b247a-469a-40c7-b4c7-f56d84dd84ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Loader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Loader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Loader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs8350_3_movies.war" beforeDir="false" afterPath="$PROJECT_DIR$/cs8350_3_movies.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu/uga/cs/ei/moviepick/Loader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/HelloWorld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieServiceApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieServiceApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Theater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Theater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/Theater.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/Theater.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
+            <state relative-caret-position="292">
+              <caret line="171" column="9" lean-forward="true" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -62,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieServiceApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -82,9 +69,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response9.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -109,10 +93,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="3" />
-    <option name="y" value="23" />
-    <option name="width" value="1139" />
+    <option name="y" value="263" />
+    <option name="width" value="1440" />
     <option name="height" value="812" />
   </component>
   <component name="ProjectView">
@@ -121,6 +105,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,7 +128,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -153,7 +137,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="moviepick" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550021339968" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550021734080" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -273,7 +257,8 @@
       <workItem from="1549942707672" duration="89000" />
       <workItem from="1549991996153" duration="2107000" />
       <workItem from="1549998579284" duration="332000" />
-      <workItem from="1549999826901" duration="8985000" />
+      <workItem from="1549999826901" duration="9158000" />
+      <workItem from="1550072559389" duration="1149000" />
     </task>
     <task id="LOCAL-00001" summary="Loader.java file adjusted, still getting error. Movie class now has XMLRootElement Annotation. Temporary build file and RunClient script added">
       <created>1549937024385</created>
@@ -286,13 +271,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24747000" />
+    <option name="totallyTimeSpent" value="26069000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3" y="23" width="1139" height="812" extended-state="0" />
+    <frame x="3" y="23" width="1437" height="812" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36736554" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2939068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -301,7 +286,6 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Learn" order="7" />
       <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="REST Client" weight="0.42083332" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -316,6 +300,7 @@
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32916668" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32916668" />
+      <window_info anchor="bottom" id="REST Client" order="14" weight="0.42083332" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -360,16 +345,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Loader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#2581#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Loader.class" />
     <entry file="file://$PROJECT_DIR$/temp/Loader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -412,20 +388,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/HelloWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-          <folding>
-            <element signature="method#getAMovie#0;class#HelloWorld#0" />
-            <element signature="method#findMoviesByRating#0;class#HelloWorld#0" />
-            <element signature="method#findMoviesByGenre#0;class#HelloWorld#0" />
-            <element signature="method#findMoviesByTitle#0;class#HelloWorld#0" />
-            <element signature="method#initialize#0;class#HelloWorld#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/HelloWorld.java" />
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
@@ -437,9 +400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -453,6 +413,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Loader.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Theater.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -460,20 +423,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Loader.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieServiceApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="171" column="9" lean-forward="true" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="9" />
         </state>
       </provider>
     </entry>
