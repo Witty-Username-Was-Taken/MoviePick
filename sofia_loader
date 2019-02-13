@@ -1,0 +1,24 @@
+import javax.ws.rs.GET;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.GenericEntity;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Loader {
+
+    public static List<Movie> initialize() {
+
+
+        List<Movie> list = new ArrayList<>();
+        list.add(new Movie("Lego", "Animation", "A Lego Movie", 4));
+        list.add(new Movie("Glass", "Fantasy", "A Night Shyamalan Fantasy thriller", 3));
+        list.add(new Movie("Miss Bala", "Drama", "Effects of narco trafficking", 1));
+        list.add(new Movie("Test 1", "Animation", "Test Movie 1", 4));
+        list.add(new Movie("Test 2", "Drama", "Test Movie 2", 3));
+        return list;
+    }
+
+
+}
