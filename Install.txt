@@ -10,7 +10,7 @@ is in the build.xml file.
 
    ant compile
 
-   This should create the necessary class files and place them in the
+   This will create the necessary class files and place them in the
    classes directory in the WEB-INF subdirectory of the application.
    The root directory of the application is called WebContent.
 
@@ -33,10 +33,12 @@ is in the build.xml file.
    deployed service by running requests from a suitable browser
    plugin, such as RESTClient for FireFox and POSTMAN for Chrome.  
    
-  Base URL : http://uml.cs.uga.edu:8080/cs8350_3_movies/api/movies
+  Base URL : http://uml.cs.uga.edu:8080/cs8350_3_movies/api/movie
 
 5. Compile the client program 
-
+   
+   Change to the root directory /cs8350_3_movies/client.java
+   
    ant client
 
    This command creates a compiled version of a simple Java program
