@@ -21,7 +21,7 @@ public class Client {
 
     static URI link;
 
-    static String movie1 = "<?xml version=\"1.0\"?><movie><title>Test</title><genre>Test</genre><description>Testing</description>2<rating></rating></student>";
+    static String movie1 = "<?xml version=\"1.0\"?><movie><id>13</id><title>Test</title><genre>Test</genre><description>Testing</description>2<rating></rating></student>";
 
 
     public static void main(String[] args) {
@@ -29,9 +29,24 @@ public class Client {
         BufferedReader br = null;
         String output = null;
 
-        //System.out.println( "Creating a movie (XML):\n" + prettyPrintXML( movie1 ) );
+        try {
 
-        ResteasyClient client = new ResteasyClientBuilder().build();
+            //System.out.println( "Creating a movie (XML):\n" + prettyPrintXML( movie1 ) );
+
+            ResteasyClient client = new ResteasyClientBuilder().build();
+            ResteasyWebTarget target = client.target( "http://localhost:8080/cs8350_3_movies/api/movies/" );
+            Response response = target.request().post( Entity.entity( movie1, MediaType.APPLICATION_XML ) );
+
+            if( response.getStatus() != 201 ) {
+                throw new RuntimeException( "POST Request failed: HTTP code: " + response.getStatus() );
+            }
+            else
+                System.out.println( "Response status: " + response.getStatus() + ";  location: " + response.getLocation() );
+
+            link = response.getLocation();
+
+            response.close();
+
         /*ResteasyWebTarget target = client.target( "http://uml.cs.uga.edu:8080/students/api/student" );
         Response response = target.request().post( Entity.entity( movie1, MediaType.APPLICATION_XML ) );
 
@@ -44,6 +59,13 @@ public class Client {
         link = response.getLocation();
 
         response.close();*/
+        }
+
+        catch( Exception e ) {
+            System.out.println( e );
+            e.printStackTrace();
+        }
+
     }
 
     public static String prettyPrintXML(String input)
