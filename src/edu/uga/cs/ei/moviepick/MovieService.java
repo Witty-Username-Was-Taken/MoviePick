@@ -29,6 +29,7 @@ public class MovieService {
         System.out.println("Received query parameters: rating=" + rating);
         System.out.println("Received query parameters: genre=" + genre);
         //List<Movie> list = Loader.initialize();
+        System.out.println("In the getAMovie method");
         if (rating != 0) {
             List<Movie> result = findMoviesByRating(list, rating);
             if (result.size() > 0) {
@@ -55,7 +56,7 @@ public class MovieService {
                 return Response.ok().entity("Movie Not Found for title " + title).build();
             }
         }
-        return Response.ok().entity("Please check your Query Param. It should be /helloworld/search?title=Lego&rating=4&genre=Fantasy ").build();
+        return Response.ok().entity("Please check your Query Param. It should be /movies/search?title=Lego&rating=4&genre=Fantasy ").build();
     }
 
     @GET
@@ -145,11 +146,15 @@ public class MovieService {
     public Response deleteStudent( @PathParam("id") Integer id ) {
 
         for (Movie movie : list) {
+            System.out.println("Movie ID: " + movie.getId());
             if (movie.getId() == id) {
+                System.out.println("Found a match!");
                 list.remove(movie);
+                break;
             }
         }
 
+        System.out.println("Returning");
         return Response.noContent().build();
     }
 

@@ -8,11 +8,11 @@ public class Loader {
     public static List<Movie> initialize() {
 
         List<Movie> list = new ArrayList<>();
-        list.add(new Movie(1, "Lego", "Animation", "A Lego Movie", 4));
-        list.add(new Movie(2, "Glass", "Fantasy", "A Night Shyamalan Fantasy thriller", 3));
-        list.add(new Movie(3, "Miss Bala", "Drama", "Effects of narco trafficking", 1));
-        list.add(new Movie(4, "Test 1", "Animation", "Test Movie 1", 4));
-        list.add(new Movie(5, "Test 2", "Drama", "Test Movie 2", 3));
+        list.add(new Movie(1, "Lego", "Animation", "A Lego Movie", "4:00 PM, 6:30 PM", 4));
+        list.add(new Movie(2, "Glass", "Fantasy", "A Night Shyamalan Fantasy thriller", "4:00 PM, 6:30 PM", 3));
+        list.add(new Movie(3, "Miss Bala", "Drama", "Effects of narco trafficking", "4:00 PM, 6:30 PM", 1));
+        list.add(new Movie(4, "Test 1", "Animation", "Test Movie 1", "4:00 PM, 6:30 PM",4));
+        list.add(new Movie(5, "Test 2", "Drama", "Test Movie 2", "4:00 PM, 6:30 PM",3));
         return list;
     }
 
@@ -20,16 +20,16 @@ public class Loader {
         List<Theater> theaters = new ArrayList<Theater>();
 
         List<Movie> movies1 = new ArrayList<Movie>();
-        movies1.add(new Movie(1, "Lego", "Animation", "A Lego Movie", 4));
-        movies1.add(new Movie(2, "Glass", "Fantasy", "A Night Shyamalan Fantasy thriller", 3));
+        movies1.add(new Movie(1, "Lego", "Animation", "A Lego Movie", "4:00 PM, 6:30 PM",4));
+        movies1.add(new Movie(2, "Glass", "Fantasy", "A Night Shyamalan Fantasy thriller", "4:00 PM, 6:30 PM",3));
 
         List<Movie> movies2 = new ArrayList<Movie>();
-        movies2.add(new Movie(3, "Miss Bala", "Drama", "Effects of narco trafficking", 1));
-        movies2.add(new Movie(4, "Test 1", "Animation", "Test Movie 1", 4));
+        movies2.add(new Movie(3, "Miss Bala", "Drama", "Effects of narco trafficking", "4:00 PM, 6:30 PM",1));
+        movies2.add(new Movie(4, "Test 1", "Animation", "Test Movie 1", "4:00 PM, 6:30 PM",4));
 
 
         List<Movie> movies3 = new ArrayList<Movie>();
-        movies3.add(new Movie(5, "Test 2", "Drama", "Test Movie 2", 3));
+        movies3.add(new Movie(5, "Test 2", "Drama", "Test Movie 2", "4:00 PM, 6:30 PM",3));
 
 
         theaters.add(new Theater(1, "Beachwood", "Somewhere", movies1));

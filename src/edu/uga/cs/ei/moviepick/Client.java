@@ -32,7 +32,7 @@ public class Client {
         //System.out.println( "Creating a movie (XML):\n" + prettyPrintXML( movie1 ) );
 
         ResteasyClient client = new ResteasyClientBuilder().build();
-        ResteasyWebTarget target = client.target( "http://uml.cs.uga.edu:8080/students/api/student" );
+        /*ResteasyWebTarget target = client.target( "http://uml.cs.uga.edu:8080/students/api/student" );
         Response response = target.request().post( Entity.entity( movie1, MediaType.APPLICATION_XML ) );
 
         if( response.getStatus() != 201 ) {
@@ -43,7 +43,7 @@ public class Client {
 
         link = response.getLocation();
 
-        response.close();
+        response.close();*/
     }
 
     public static String prettyPrintXML(String input)

@@ -9,6 +9,7 @@ public class Movie {
     private String title;
     private String genre;
     private String description;
+    private String showTimes;
     private int rating;
 
     public Movie() {
@@ -16,14 +17,16 @@ public class Movie {
         this.title = null;
         this.genre = null;
         this.description = null;
+        this.showTimes = null;
         this.rating = 0;
     }
 
-    public Movie(int id, String title, String genre, String description, int rating) {
+    public Movie(int id, String title, String genre, String description, String showTimes, int rating) {
         this.id = id;
         this.title = title;
         this.genre = genre;
         this.description = description;
+        this.showTimes = showTimes;
         this.rating = rating;
     }
 
@@ -57,6 +60,14 @@ public class Movie {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getShowTimes() {
+        return showTimes;
+    }
+
+    public void setShowTimes(String showTimes) {
+        this.showTimes = showTimes;
     }
 
     public int getRating() {
