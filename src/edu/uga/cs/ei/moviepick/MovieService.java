@@ -64,7 +64,7 @@ public class MovieService {
     public Response getMovieXML() {
         //return Response.ok().entity(initialize()).build();
 
-        GenericEntity<List<Movie>> entity = new GenericEntity<List<Movie>>(Loader.initialize()){};
+        GenericEntity<List<Movie>> entity = new GenericEntity<List<Movie>>(list){};
         Response response = Response.ok( entity ).build();
 
         return response;

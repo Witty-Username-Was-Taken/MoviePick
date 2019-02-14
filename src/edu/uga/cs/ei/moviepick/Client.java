@@ -21,7 +21,7 @@ public class Client {
 
     static URI link;
 
-    static String movie1 = "<?xml version=\"1.0\"?><movie><id>13</id><title>Test</title><genre>Test</genre><description>Testing</description>2<rating></rating></student>";
+    static String movie1 = "<?xml version=\"1.0\"?><movie><id>13</id><title>Test</title><genre>Test</genre><description>Testing</description>2<rating></rating></movie>";
 
 
     public static void main(String[] args) {
@@ -31,7 +31,7 @@ public class Client {
 
         try {
 
-            //System.out.println( "Creating a movie (XML):\n" + prettyPrintXML( movie1 ) );
+            System.out.println( "Creating a movie (XML):\n" + prettyPrintXML( movie1 ) );
 
             ResteasyClient client = new ResteasyClientBuilder().build();
             ResteasyWebTarget target = client.target( "http://localhost:8080/cs8350_3_movies/api/movies/" );

@@ -23,7 +23,6 @@ Tasks to be done
 	    <pathelement location="/usr/local/opt/jboss/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxrs/main/*.jar"/>
 	    <pathelement location="/usr/local/opt/jboss/modules/system/layers/base/org/slf4j/main/*.jar"/>
 	    <pathelement location="lib/*.jar"/>
-		<pathelement location=""
 	</path>
 
 	<target name="clean">
