@@ -1,10 +1,9 @@
 Instructions to compile and deploy the MoviePick as a RESTful service
 -----------------------------------------------------------------------------
 
-This example uses an ant build file to compile the code, create a war
+This project uses an ant build file to compile the code, create a war
 archive, and deploy on our JBoss server on uml.  The ant script 
-is in the build.xml file.  You may use it as an example for future
-projects.
+is in the build.xml file.  
 
 
 1. Compile the server classes:
@@ -19,27 +18,28 @@ projects.
 
    ant war
 
-   This should create the file movies.war in this directory.
+   This creates the file cs8350_3_movies.war in this directory.
 
 3. Deploy the application to JBoss
 
    ant deploy
 
    This should copy the war file into the JBoss deployments
-   directory.  Verify it by looking at the JBoss log file:
+   directory.  We Verified it by looking at the JBoss log file:
 
    tail /opt/jboss/standalone/log/server.log
 
-4. At this point, you should be able to interact with the
+4. Afetr this point,we were able to interact with the
    deployed service by running requests from a suitable browser
-   plugin, such as RESTClient for FireFox.  Many plugins of this type
-   are available for various browsers.
+   plugin, such as RESTClient for FireFox and POSTMAN for Chrome.  
+   
+  Base URL : http://uml.cs.uga.edu:8080/cs8350_3_movies/api/movies
 
 5. Compile the client program 
 
    ant client
 
-   This should create a compiled version of a simple Java program
+   This command creates a compiled version of a simple Java program
    which illustrates how to use the deployed MoviePick service from
    a Java program, using the REST client interface.
  
