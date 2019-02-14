@@ -58,42 +58,6 @@ public class MovieService {
         return Response.ok().entity("Please check your Query Param. It should be /helloworld/search?title=Lego&rating=4&genre=Fantasy ").build();
     }
 
-    private List<Movie> findMoviesByRating(List<Movie> list, int rating) {
-        List<Movie> result = new ArrayList<>();
-        Iterator<Movie> it = list.iterator();
-        while (it.hasNext()) {
-            Movie next = it.next();
-            if (next.getRating() == rating) {
-                result.add(next);
-            }
-        }
-        return result;
-    }
-
-    private List<Movie> findMoviesByGenre(List<Movie> list, String genre) {
-        List<Movie> result = new ArrayList<>();
-        Iterator<Movie> it = list.iterator();
-        while (it.hasNext()) {
-            Movie next = it.next();
-            if (next.getGenre().equalsIgnoreCase(genre)) {
-                result.add(next);
-            }
-        }
-        return result;
-    }
-
-    private List<Movie> findMoviesByTitle(List<Movie> list, String title) {
-        List<Movie> result = new ArrayList<>();
-        Iterator<Movie> it = list.iterator();
-        while (it.hasNext()) {
-            Movie next = it.next();
-            if (next.getTitle().toLowerCase().contains(title.toLowerCase())) {
-                result.add(next);
-            }
-        }
-        return result;
-    }
-
     @GET
     @Produces(MediaType.APPLICATION_XML)
     public Response getMovieXML() {
@@ -162,20 +126,16 @@ public class MovieService {
         for (Movie temp: list) {
             if (temp.getId() == id) {
                 current = temp;
+                temp.setDescription( movie.getDescription() );
+                temp.setGenre( movie.getGenre() );
+                temp.setRating( movie.getRating() );
+                temp.setTitle( movie.getTitle() );
             }
         }
 
         if (current == null) {
             throw new NoLogWebApplicationException( Response.Status.NOT_FOUND );
         }
-
-        /* TODO: This wouldn't update the list, would it?
-        *  TODO: Move this inside for loop?
-         */
-        current.setDescription( movie.getDescription() );
-        current.setGenre( movie.getGenre() );
-        current.setRating( movie.getRating() );
-        current.setTitle( movie.getTitle() );
 
         return Response.noContent().build();
     }
@@ -193,4 +153,39 @@ public class MovieService {
         return Response.noContent().build();
     }
 
+    private List<Movie> findMoviesByRating(List<Movie> list, int rating) {
+        List<Movie> result = new ArrayList<>();
+        Iterator<Movie> it = list.iterator();
+        while (it.hasNext()) {
+            Movie next = it.next();
+            if (next.getRating() == rating) {
+                result.add(next);
+            }
+        }
+        return result;
+    }
+
+    private List<Movie> findMoviesByGenre(List<Movie> list, String genre) {
+        List<Movie> result = new ArrayList<>();
+        Iterator<Movie> it = list.iterator();
+        while (it.hasNext()) {
+            Movie next = it.next();
+            if (next.getGenre().equalsIgnoreCase(genre)) {
+                result.add(next);
+            }
+        }
+        return result;
+    }
+
+    private List<Movie> findMoviesByTitle(List<Movie> list, String title) {
+        List<Movie> result = new ArrayList<>();
+        Iterator<Movie> it = list.iterator();
+        while (it.hasNext()) {
+            Movie next = it.next();
+            if (next.getTitle().toLowerCase().contains(title.toLowerCase())) {
+                result.add(next);
+            }
+        }
+        return result;
+    }
 }

@@ -57,7 +57,7 @@ Tasks to be done
 		<echo>Compile the loader code source</echo>
 		<property name="myclasspath" refid="classpath"/>
 		<javac srcdir="." destdir=".">
-		  	<include name="Loader.java" />
+		  	<include name="Client.java" />
 			<classpath refid="classpath"/>
 		</javac>
 	</target>
