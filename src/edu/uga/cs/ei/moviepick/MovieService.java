@@ -12,15 +12,16 @@ import java.util.Iterator;
 import java.util.List;
 
 
-@Path("/movies")
+@Path("/movie")
 public class MovieService {
 
-    int nextId = 5;
+    int nextId = 6;
     List<Movie> list = Loader.initialize();
+    List<Theater> theaterList = Loader.initTheaters();
 
     @GET
     @Path("/search")
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_XML)
     public Response getAMovie(
             @QueryParam("genre") String genre,
             @QueryParam("rating") int rating,
@@ -29,34 +30,35 @@ public class MovieService {
         System.out.println("Received query parameters: rating=" + rating);
         System.out.println("Received query parameters: genre=" + genre);
         //List<Movie> list = Loader.initialize();
+
+        if (list.isEmpty()) {
+            list = Loader.initialize();
+        }
+
         System.out.println("In the getAMovie method");
-        if (rating != 0) {
-            List<Movie> result = findMoviesByRating(list, rating);
-            if (result.size() > 0) {
-                return Response.ok().entity(result).build();
-            } else {
-                return Response.ok().entity("Movie Not Found for rating " + rating).build();
+
+        GenericEntity<List<Movie>> entity;
+        List<Movie> totalResults = new ArrayList<Movie>();
+
+        try {
+
+            for (Movie movie : list) {
+                System.out.println("Movie title: " + movie.getTitle());
+                if((movie.getTitle().equals(title) || movie.getGenre().equals(genre) || movie.getRating() == rating) && !totalResults.contains(movie)) {
+                    System.out.println("Got a hit!");
+                    totalResults.add(movie);
+                }
             }
+
+        }
+        catch (NullPointerException e) {
+            e.printStackTrace();
         }
 
-        if (genre != null && !genre.isEmpty()) {
-            List<Movie> result = findMoviesByGenre(list, genre);
-            if (result.size() > 0) {
-                return Response.ok().entity(result).build();
-            } else {
-                return Response.ok().entity("Movie Not Found for genre " + genre).build();
-            }
-        }
+        entity = new GenericEntity<List<Movie>>(totalResults){};
+        Response response = Response.ok(entity).build();
 
-        if (title != null && !title.isEmpty()) {
-            List<Movie> result = findMoviesByTitle(list, title);
-            if (result.size() > 0) {
-                return Response.ok().entity(result).build();
-            } else{
-                return Response.ok().entity("Movie Not Found for title " + title).build();
-            }
-        }
-        return Response.ok().entity("Please check your Query Param. It should be /movies/search?title=Lego&rating=4&genre=Fantasy ").build();
+        return response;
     }
 
     @GET
@@ -67,28 +69,35 @@ public class MovieService {
         GenericEntity<List<Movie>> entity = new GenericEntity<List<Movie>>(list){};
         Response response = Response.ok( entity ).build();
 
+
         return response;
     }
 
     @GET
-    @Path("/{id}")
+    @Path("{id}")
     @Produces(MediaType.APPLICATION_XML)
     public Movie getMovieByID(@PathParam("id") Integer id) {
 
-        Movie result = new Movie();
-        for (Movie movie : list) {
-            if (movie.getId() == id) {
-                result = movie;
+        Movie result = null;
+
+        try {
+            for (Movie movie : list) {
+                if (movie.getId() == id) {
+                    System.out.println("Got a result in GET /{id}: " + movie.getId() + " " + id);
+                    result = movie;
+                }
+            }
+
+            if (result == null) {
+                // if you'd like to log this exception in JBoss log file, use WebApplicationException
+                // otherwise, use NoLogWebApplicationException, which will not log the exception
+                // throw new WebApplicationException( Response.Status.NOT_FOUND );
+                throw new NoLogWebApplicationException(Response.Status.NOT_FOUND);
             }
         }
-
-        if( result == null ) {
-            // if you'd like to log this exception in JBoss log file, use WebApplicationException
-            // otherwise, use NoLogWebApplicationException, which will not log the exception
-            // throw new WebApplicationException( Response.Status.NOT_FOUND );
-            throw new NoLogWebApplicationException( Response.Status.NOT_FOUND );
+        catch (NullPointerException e) {
+            e.printStackTrace();
         }
-
         return result;
     }
 
@@ -99,6 +108,36 @@ public class MovieService {
 
         GenericEntity<List<Theater>> entity = new GenericEntity<List<Theater>>(Loader.initTheaters()){};
         Response response = Response.ok( entity ).build();
+
+        return response;
+    }
+
+    @GET
+    @Path("/theaters/{id}")
+    @Produces(MediaType.APPLICATION_XML)
+    public Response getTheaterResultXML(@PathParam("id") Integer id) {
+        Theater result = null;
+
+        try {
+            for (Theater theater : theaterList) {
+                if (theater.getId() == id) {
+                    System.out.println("Got a result in GET /{id}: " + theater.getId() + " " + id);
+                    result = theater;
+                }
+            }
+
+            if (result == null) {
+                // if you'd like to log this exception in JBoss log file, use WebApplicationException
+                // otherwise, use NoLogWebApplicationException, which will not log the exception
+                // throw new WebApplicationException( Response.Status.NOT_FOUND );
+                throw new NoLogWebApplicationException(Response.Status.NOT_FOUND);
+            }
+        }
+        catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+
+        Response response = Response.ok(result).build();
 
         return response;
     }
@@ -124,18 +163,25 @@ public class MovieService {
     @Consumes( MediaType.APPLICATION_XML )
     public Response updateMovieXML( @PathParam( "id" ) Integer id, Movie movie ) {
         Movie current = new Movie();
-        for (Movie temp: list) {
-            if (temp.getId() == id) {
-                current = temp;
-                temp.setDescription( movie.getDescription() );
-                temp.setGenre( movie.getGenre() );
-                temp.setRating( movie.getRating() );
-                temp.setTitle( movie.getTitle() );
+
+        try {
+            for (Movie temp : list) {
+                if (temp.getId() == id) {
+                    current = temp;
+                    temp.setTitle(movie.getTitle());
+                    temp.setDescription(movie.getDescription());
+                    temp.setShowTimes(movie.getShowTimes());
+                    temp.setGenre(movie.getGenre());
+                    temp.setRating(movie.getRating());
+                }
+            }
+
+            if (current == null) {
+                throw new NoLogWebApplicationException(Response.Status.NOT_FOUND);
             }
         }
-
-        if (current == null) {
-            throw new NoLogWebApplicationException( Response.Status.NOT_FOUND );
+        catch (NullPointerException e) {
+            e.printStackTrace();
         }
 
         return Response.noContent().build();
@@ -144,53 +190,18 @@ public class MovieService {
     @DELETE
     @Path( "/{id}" )
     public Response deleteStudent( @PathParam("id") Integer id ) {
-
+        int count = 0;
         for (Movie movie : list) {
             System.out.println("Movie ID: " + movie.getId());
             if (movie.getId() == id) {
                 System.out.println("Found a match!");
-                list.remove(movie);
+                list.set(count, null);
                 break;
             }
+            count ++;
         }
 
         System.out.println("Returning");
         return Response.noContent().build();
-    }
-
-    private List<Movie> findMoviesByRating(List<Movie> list, int rating) {
-        List<Movie> result = new ArrayList<>();
-        Iterator<Movie> it = list.iterator();
-        while (it.hasNext()) {
-            Movie next = it.next();
-            if (next.getRating() == rating) {
-                result.add(next);
-            }
-        }
-        return result;
-    }
-
-    private List<Movie> findMoviesByGenre(List<Movie> list, String genre) {
-        List<Movie> result = new ArrayList<>();
-        Iterator<Movie> it = list.iterator();
-        while (it.hasNext()) {
-            Movie next = it.next();
-            if (next.getGenre().equalsIgnoreCase(genre)) {
-                result.add(next);
-            }
-        }
-        return result;
-    }
-
-    private List<Movie> findMoviesByTitle(List<Movie> list, String title) {
-        List<Movie> result = new ArrayList<>();
-        Iterator<Movie> it = list.iterator();
-        while (it.hasNext()) {
-            Movie next = it.next();
-            if (next.getTitle().toLowerCase().contains(title.toLowerCase())) {
-                result.add(next);
-            }
-        }
-        return result;
     }
 }

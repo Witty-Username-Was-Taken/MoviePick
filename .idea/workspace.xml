@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="480b247a-469a-40c7-b4c7-f56d84dd84ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/temp/Loader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs8350_3_movies.war" beforeDir="false" afterPath="$PROJECT_DIR$/cs8350_3_movies.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_Loader.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Loader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/Loader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/Movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/edu/uga/cs/ei/moviepick/MovieService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -21,19 +25,27 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Movie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-96">
+              <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+              <folding>
+                <element signature="method#Movie#0;class#Movie#0" />
+                <element signature="method#Movie#1;class#Movie#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="66" column="79" selection-start-line="66" selection-start-column="79" selection-end-line="66" selection-end-column="79" />
+            <state relative-caret-position="386">
+              <caret line="141" column="24" lean-forward="true" selection-start-line="141" selection-start-column="24" selection-end-line="141" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#getAMovie#0;class#MovieService#0" />
-                <element signature="method#getMovieByID#0;class#MovieService#0" />
-                <element signature="method#getTheatersXML#0;class#MovieService#0" />
-                <element signature="method#createMovieXML#0;class#MovieService#0" />
-                <element signature="method#findMoviesByRating#0;class#MovieService#0" />
-                <element signature="method#findMoviesByGenre#0;class#MovieService#0" />
-                <element signature="method#findMoviesByTitle#0;class#MovieService#0" />
+                <element signature="e#1201#1208#0" expanded="true" />
+                <element signature="e#2062#2075#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,11 +54,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-78">
-              <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="148">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Loader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="14" column="171" selection-start-line="5" selection-start-column="13" selection-end-line="14" selection-end-column="171" />
             </state>
           </provider>
         </entry>
@@ -54,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
+            <state relative-caret-position="360">
               <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
             </state>
           </provider>
@@ -87,6 +105,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>movie</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -107,9 +130,9 @@
         <option value="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Movie.java" />
         <option value="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Loader.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Client.java" />
-        <option value="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java" />
         <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java" />
+        <option value="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Client.java" />
       </list>
     </option>
   </component>
@@ -119,9 +142,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="width" value="1420" />
     <option name="height" value="812" />
   </component>
   <component name="ProjectView">
@@ -129,7 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,6 +184,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -171,7 +194,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="moviepick" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550167984580" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550194196991" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -180,19 +203,19 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.uga.cs.ei.moviepick" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick" />
       <recent name="$PROJECT_DIR$/temp" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/lib" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="edu.uga.cs.ei.moviepick" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -326,7 +349,8 @@
       <workItem from="1550072559389" duration="1594000" />
       <workItem from="1550077956101" duration="833000" />
       <workItem from="1550082721945" duration="14583000" />
-      <workItem from="1550153880441" duration="4480000" />
+      <workItem from="1550153880441" duration="4686000" />
+      <workItem from="1550179822501" duration="12547000" />
     </task>
     <task id="LOCAL-00001" summary="Loader.java file adjusted, still getting error. Movie class now has XMLRootElement Annotation. Temporary build file and RunClient script added">
       <created>1549937024385</created>
@@ -339,13 +363,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46410000" />
+    <option name="totallyTimeSpent" value="59163000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="812" extended-state="6" />
+    <frame x="0" y="23" width="1420" height="812" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49861112" visible="true" weight="0.30615166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49861112" visible="true" weight="0.30986938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -356,12 +380,47 @@
       <window_info id="Web" order="8" sideWeight="0.5013889" side_tool="true" weight="0.3025751" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32916668" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.32916668" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32916668" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007153" side_tool="true" weight="0.32916668" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32916668" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32916668" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32916668" />
+      <window_info anchor="bottom" id="REST Client" order="14" weight="0.42083332" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32904148" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49861112" visible="true" weight="0.3104435" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Learn" order="7" />
+      <window_info id="Web" order="8" sideWeight="0.5013889" side_tool="true" weight="0.3025751" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32916668" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32916668" />
@@ -378,7 +437,7 @@
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -458,24 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="method#Movie#0;class#Movie#0" />
-            <element signature="method#Movie#1;class#Movie#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Loader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -487,20 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Theater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieServiceApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -529,13 +556,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml" />
     <entry file="file://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxrs-all/3.0.9.Final/resteasy-jaxrs-all-3.0.9.Final.pom">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -543,37 +564,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java">
+    <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="66" column="79" selection-start-line="66" selection-start-column="79" selection-end-line="66" selection-end-column="79" />
+        <state relative-caret-position="360">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/Loader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="84" lean-forward="true" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Theater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieServiceApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getAMovie#0;class#MovieService#0" />
-            <element signature="method#getMovieByID#0;class#MovieService#0" />
-            <element signature="method#getTheatersXML#0;class#MovieService#0" />
-            <element signature="method#createMovieXML#0;class#MovieService#0" />
-            <element signature="method#findMoviesByRating#0;class#MovieService#0" />
-            <element signature="method#findMoviesByGenre#0;class#MovieService#0" />
-            <element signature="method#findMoviesByTitle#0;class#MovieService#0" />
+            <element signature="method#Movie#0;class#Movie#0" />
+            <element signature="method#Movie#1;class#Movie#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
+    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Loader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+        <state relative-caret-position="172">
+          <caret line="14" column="171" selection-start-line="5" selection-start-column="13" selection-end-line="14" selection-end-column="171" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/MovieService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="141" column="24" lean-forward="true" selection-start-line="141" selection-start-column="24" selection-end-line="141" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1201#1208#0" expanded="true" />
+            <element signature="e#2062#2075#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/uga/cs/ei/moviepick/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-78">
-          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="148">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
